@@ -59,7 +59,8 @@ function renderClock(h,m) {
 }
 
 const calcDegM =time => time/60*360
-const calcDegH = (timeH,timeM)=> (Math.abs(timeH-12)+(timeM/60))/12*360
+const calcDegH = (timeH,timeM)=> (Math.abs(timeH>12?timeH-12:timeH-0)+(timeM/60))/12*360
+
 
 
 //Пасхалка
@@ -67,3 +68,4 @@ const calcDegH = (timeH,timeM)=> (Math.abs(timeH-12)+(timeM/60))/12*360
 dot.onclick = function() {
   console.log("Байсупов Данила")
 };
+f
